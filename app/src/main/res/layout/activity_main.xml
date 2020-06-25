@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:id="@+id/line"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
     tools:context=".MainActivity">
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
@@ -24,7 +24,7 @@
         android:background="@drawable/edittext_bg"
         android:padding="10dp"
         android:layout_width="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_height="wrap_content"
         android:hint="Your Name"
         android:layout_below="@id/lottie"
@@ -77,12 +77,25 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:text="Calculate your bonding !!"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Warning!\n Love Calculator - My Crush Love Calculator does not calculate the real bonding and love between the two. It is only for fun and entertainment purposes."
+        android:layout_below="@id/btn_cal"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"/>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Design by Silent Codder"/>
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        android:layout_marginBottom="20dp"
+        app:adUnitId="@string/banner_ad_unit_id"
+        />
+
+
 
   </RelativeLayout>
